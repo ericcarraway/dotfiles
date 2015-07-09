@@ -1,0 +1,13 @@
+[url "https://"]
+    insteadOf = git://
+[user]
+    name = <USERNAME>
+    email = <EMAIL@EXAMPLE.COM>
+[push]
+    default = nothing
+[pull]
+    default = nothing
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
