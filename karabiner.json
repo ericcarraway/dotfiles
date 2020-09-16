@@ -1,0 +1,663 @@
+{
+    "global": {
+        "check_for_updates_on_startup": true,
+        "show_in_menu_bar": true,
+        "show_profile_name_in_menu_bar": false
+    },
+    "profiles": [
+        {
+            "complex_modifications": {
+                "parameters": {
+                    "basic.simultaneous_threshold_milliseconds": 50,
+                    "basic.to_delayed_action_delay_milliseconds": 500,
+                    "basic.to_if_alone_timeout_milliseconds": 1000,
+                    "basic.to_if_held_down_threshold_milliseconds": 500,
+                    "mouse_motion_to_scroll.speed": 100
+                },
+                "rules": [
+                    {
+                        "description": "HOME ROW NAVIGATION - September 2019",
+                        "manipulators": [
+                            {
+                                "description": "`set_variable` `s_is_down`",
+                                "from": {
+                                    "key_code": "s",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "set_variable": {
+                                            "name": "s_is_down",
+                                            "value": 1
+                                        }
+                                    }
+                                ],
+                                "to_after_key_up": [
+                                    {
+                                        "set_variable": {
+                                            "name": "s_is_down",
+                                            "value": 0
+                                        }
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "s"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `h` to `left_arrow` if `s_is_down`",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `j` to `down_arrow` if `s_is_down`",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `k` to `up_arrow` if `s_is_down`",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `l` to `right_arrow` if `s_is_down`",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `f` to `fn` (modifier) if `s_is_down`",
+                                "from": {
+                                    "key_code": "f",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "fn"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `h` to `home` if (f+) `s_is_down`",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "home"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `j` to `page_down` if (f+) `s_is_down`",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "page_down"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `k` to `page_up` if (f+) `s_is_down`",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "page_up"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `l` to `end` if (f+) `s_is_down`",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "fn"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "end"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `d` to `left_option` (modifier) if `s_is_down`",
+                                "from": {
+                                    "key_code": "d",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_option"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `h` to `left_option + left_arrow` if (d+) `s_is_down` - move cursor one word left",
+                                "from": {
+                                    "key_code": "h",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_arrow",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `j` to `left_option + down_arrow` if (d+) `s_is_down` - move (highlighted) line or highlighted code block one line down",
+                                "from": {
+                                    "key_code": "j",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "down_arrow",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `k` to `left_option + up_arrow` if (d+) `s_is_down` - move (highlighted) line or highlighted code block one line up",
+                                "from": {
+                                    "key_code": "k",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "up_arrow",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `l` to `left_option + right_arrow` if (d+) `s_is_down` - move cursor one word right",
+                                "from": {
+                                    "key_code": "l",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_option"
+                                        ],
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_arrow",
+                                        "modifiers": [
+                                            "left_option"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "conditions": [
+                                    {
+                                        "name": "s_is_down",
+                                        "type": "variable_if",
+                                        "value": 1
+                                    }
+                                ],
+                                "description": "from `semicolon` to `return_or_enter` if `s_is_down`",
+                                "from": {
+                                    "key_code": "semicolon"
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "return_or_enter"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "from `a` to `left_shift`",
+                                "from": {
+                                    "key_code": "a",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "left_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "a"
+                                    }
+                                ],
+                                "type": "basic"
+                            },
+                            {
+                                "description": "from `semicolon` to `right_shift`",
+                                "from": {
+                                    "key_code": "semicolon",
+                                    "modifiers": {
+                                        "optional": [
+                                            "caps_lock",
+                                            "left_shift",
+                                            "right_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "right_shift"
+                                    }
+                                ],
+                                "to_if_alone": [
+                                    {
+                                        "key_code": "semicolon"
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "devices": [],
+            "fn_function_keys": [
+                {
+                    "from": {
+                        "key_code": "f1"
+                    },
+                    "to": {
+                        "consumer_key_code": "display_brightness_decrement"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f2"
+                    },
+                    "to": {
+                        "consumer_key_code": "display_brightness_increment"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f3"
+                    },
+                    "to": {
+                        "key_code": "mission_control"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f4"
+                    },
+                    "to": {
+                        "key_code": "launchpad"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f5"
+                    },
+                    "to": {
+                        "key_code": "illumination_decrement"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f6"
+                    },
+                    "to": {
+                        "key_code": "illumination_increment"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f7"
+                    },
+                    "to": {
+                        "consumer_key_code": "rewind"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f8"
+                    },
+                    "to": {
+                        "consumer_key_code": "play_or_pause"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f9"
+                    },
+                    "to": {
+                        "consumer_key_code": "fastforward"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f10"
+                    },
+                    "to": {
+                        "consumer_key_code": "mute"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f11"
+                    },
+                    "to": {
+                        "consumer_key_code": "volume_decrement"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "f12"
+                    },
+                    "to": {
+                        "consumer_key_code": "volume_increment"
+                    }
+                }
+            ],
+            "name": "Default profile",
+            "parameters": {
+                "delay_milliseconds_before_open_device": 1000
+            },
+            "selected": true,
+            "simple_modifications": [
+                {
+                    "from": {
+                        "key_code": "caps_lock"
+                    },
+                    "to": {
+                        "key_code": "delete_or_backspace"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": {
+                        "key_code": "delete_forward"
+                    }
+                },
+                {
+                    "from": {
+                        "key_code": "right_option"
+                    },
+                    "to": {
+                        "key_code": "return_or_enter"
+                    }
+                }
+            ],
+            "virtual_hid_keyboard": {
+                "country_code": 0,
+                "mouse_key_xy_scale": 100
+            }
+        }
+    ]
+}
