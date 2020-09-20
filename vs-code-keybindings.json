@@ -1,0 +1,23 @@
+[
+  // as is normal behavior,
+  // shift+cmd+f shows the search if it's not visible
+  {
+    "key": "shift+cmd+f",
+    "command": "workbench.view.search",
+    "when": "!searchViewletVisible"
+  },
+
+  // this customization hides the search when it is visible
+  {
+    "key": "shift+cmd+f",
+    "command": "workbench.action.closeSidebar",
+    "when": "searchViewletVisible"
+  },
+
+  // two tabs to focus on search results instead of 8
+  // {
+  //   "key": "tab tab",
+  //   "command": "search.action.focusNextSearchResult",
+  //   "when": "searchViewletVisible && hasSearchResult"
+  // },
+]
