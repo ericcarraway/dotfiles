@@ -1,0 +1,105 @@
+{
+    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        20,
+        40,
+        60,
+        80,
+        100,
+    ],
+    "editor.tabSize": 2,
+    "editor.tokenColorCustomizations":
+    {
+        "textMateRules": [
+            {
+                "scope": "comment",
+                "settings":
+                {
+                    "fontStyle": "italic"
+                }
+            }
+        ]
+    },
+    "explorer.openEditors.visible": 0,
+    "files.associations": {
+        ".eslintrc": "jsonc"
+    },
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "highlightLine.borderColor": "#00ff00",
+    "highlightLine.borderWidth": "1px",
+    "highlightLine.borderStyle": "solid",
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "todohighlight.keywordsPattern": "CAREFUL:|CAUTION:|CHECK:|CONSIDER:|DOCUMENTATION:|ERROR:|EXAMPLE:|EXAMPLES:|FIXME:|FROM:|FUTURE:|HACK:|IDEA:|IMPORTANT:|LEARN:|NEW:|NOTE:|OK:|OLD:|OPTIONAL:|QUESTION:|REMOVE:|REMEMBER:|RENAME:|RESEARCH:|REQUIRED:|SECURITY:|SEE:|TBD:|TEMP:|TEMPORARY:|TODO:|TRACE:|WARN:|WARNING:|WIP:|WHY\\?",
+    "window.zoomLevel": 2,
+
+    // hide on the left side: Explorer, Search, Source Control, Run, Extensions
+    "workbench.activityBar.visible": false,
+
+    "workbench.colorCustomizations":
+    {
+        "editorCursor.foreground": "#00ff00"
+    },
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.showIcons": false,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "newUntitledFile",
+    "cSpell.userWords": [
+        "camelcase",
+        "Carraway",
+        "ericcarraway",
+
+        // for services which,
+        // when called more than once with the same input parameters,
+        // have no additional affect
+        "idempotence",
+
+        // Immediately Invoked Function Expression
+        "IIFE",
+        "iife",
+
+        "drumlinechops",
+
+        // if we made it here...
+        "IWMIH",
+        "Speisekarte",
+
+        "timecode",
+
+        "unprocessable",
+
+        // because Sails.helpers.validators is reserved
+        "validatorz",
+
+        "performant",
+        "hmmm",
+    ],
+    "search.exclude":
+    {
+        "**/node_modules": false
+    },
+
+    // https://www.peacockcode.dev/
+    // https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock
+    // requires `.vscode/settings.json` for the project to have "peacock.color"
+    "peacock.affectTitleBar": true,
+    "peacock.favoriteColors": [
+        {
+            // https://ensembleblock.com/
+            "name": "Ensemble Block",
+            "value": "#1E3C62"
+        },
+        {
+            // https://www.npmjs.com/package/@percuss.io/soundslice-data-api
+            "name": "Soundslice",
+            "value": "#fc5d2b"
+        }
+    ],
+    "workbench.statusBar.visible": true,
+    "python.defaultInterpreterPath": "/usr/bin/python3"
+}
