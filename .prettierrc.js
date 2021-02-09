@@ -18,7 +18,7 @@ module.exports = {
   vueIndentScriptAndStyle: false,
   overrides: [
     {
-      files: [`*.yml`],
+      files: [`*.css`, `*.scss`, `*.yml`],
       options: {
         singleQuote: false,
       },
