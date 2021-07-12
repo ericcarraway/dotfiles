@@ -1,105 +1,167 @@
 {
-    "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.minimap.enabled": false,
-    "editor.renderWhitespace": "all",
-    "editor.rulers": [
-        20,
-        40,
-        60,
-        80,
-        100,
-    ],
-    "editor.tabSize": 2,
-    "editor.tokenColorCustomizations":
-    {
-        "textMateRules": [
-            {
-                "scope": "comment",
-                "settings":
-                {
-                    "fontStyle": "italic"
-                }
-            }
-        ]
-    },
-    "explorer.openEditors.visible": 0,
-    "files.associations": {
-        ".eslintrc": "jsonc"
-    },
-    "files.trimFinalNewlines": true,
-    "files.trimTrailingWhitespace": true,
-    "highlightLine.borderColor": "#00ff00",
-    "highlightLine.borderWidth": "1px",
-    "highlightLine.borderStyle": "solid",
-    "javascript.updateImportsOnFileMove.enabled": "always",
-    "todohighlight.keywordsPattern": "CAREFUL:|CAUTION:|CHECK:|CONSIDER:|DOCUMENTATION:|ERROR:|EXAMPLE:|EXAMPLES:|FIXME:|FROM:|FUTURE:|HACK:|IDEA:|IMPORTANT:|LEARN:|NEW:|NOTE:|OK:|OLD:|OPTIONAL:|QUESTION:|REMOVE:|REMEMBER:|RENAME:|RESEARCH:|REQUIRED:|SECURITY:|SEE:|TBD:|TEMP:|TEMPORARY:|TODO:|TRACE:|WARN:|WARNING:|WIP:|WHY\\?",
-    "window.zoomLevel": 2,
+  // "[ejs]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  //   "editor.formatOnSave": false,
+  // },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": false
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": false
+  },
 
-    // hide on the left side: Explorer, Search, Source Control, Run, Extensions
-    "workbench.activityBar.visible": false,
+  // "Code Spell Checker" by "Street Side Software"
+  "cSpell.userWords": [
+    "Ableton",
+    "Airtable",
+    "allowlist",
+    "appension",
+    "autobounce",
+    "autobounces",
+    "buildable",
+    "camelcase",
+    "Carraway",
+    "classname",
+    "collab",
+    "deletable",
+    "destructure",
+    "drumline",
+    "drumlinechops",
+    "ensembleblock",
+    "ericcarraway",
+    "gulpfile",
+    "hmmm",
+    "idempotence",
+    "IIFE",
+    "isogram",
+    "IWMIH",
+    "Konnakol",
+    "Kubernetes",
+    "Manjunath",
+    "Mixpanel",
+    "nrwl",
+    "performant",
+    "playbar",
+    "Playhead",
+    "protobuf",
+    "scorehash",
+    "scrollable",
+    "serializers",
+    "Soundslice's",
+    "Soundslice",
+    "Speisekarte",
+    "Strapi",
+    "subfolders",
+    "syncpoint",
+    "syncpoints",
+    "timecode",
+    "Unprocessable",
+    "validatorz",
+    "wonkiness"
+  ],
 
-    "workbench.colorCustomizations":
-    {
-        "editorCursor.foreground": "#00ff00"
-    },
-    "workbench.colorTheme": "Dracula",
-    "workbench.editor.showIcons": false,
-    "workbench.editor.showTabs": true,
-    "workbench.editor.tabCloseButton": "off",
-    "workbench.sideBar.location": "right",
-    "workbench.startupEditor": "newUntitledFile",
-    "cSpell.userWords": [
-        "camelcase",
-        "Carraway",
-        "ericcarraway",
+  "css.lint.boxModel": "warning",
+  "css.lint.compatibleVendorPrefixes": "warning",
+  "css.lint.duplicateProperties": "warning",
+  "css.lint.float": "warning",
+  "css.lint.universalSelector": "warning",
+  "css.lint.unknownVendorSpecificProperties": "warning",
+  "css.lint.zeroUnits": "error",
 
-        // for services which,
-        // when called more than once with the same input parameters,
-        // have no additional affect
-        "idempotence",
-
-        // Immediately Invoked Function Expression
-        "IIFE",
-        "iife",
-
-        "drumlinechops",
-
-        // if we made it here...
-        "IWMIH",
-        "Speisekarte",
-
-        "timecode",
-
-        "unprocessable",
-
-        // because Sails.helpers.validators is reserved
-        "validatorz",
-
-        "performant",
-        "hmmm",
-    ],
-    "search.exclude":
-    {
-        "**/node_modules": false
-    },
-
-    // https://www.peacockcode.dev/
-    // https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock
-    // requires `.vscode/settings.json` for the project to have "peacock.color"
-    "peacock.affectTitleBar": true,
-    "peacock.favoriteColors": [
-        {
-            // https://ensembleblock.com/
-            "name": "Ensemble Block",
-            "value": "#1E3C62"
-        },
-        {
-            // https://www.npmjs.com/package/@percuss.io/soundslice-data-api
-            "name": "Soundslice",
-            "value": "#fc5d2b"
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace",
+  "editor.fontLigatures": true,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [20, 40, 60, 80, 100],
+  "editor.tabSize": 2,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": "italic"
         }
-    ],
-    "workbench.statusBar.visible": true,
-    "python.defaultInterpreterPath": "/usr/bin/python3"
+      }
+    ]
+  },
+  "explorer.openEditors.visible": 0,
+
+  "files.associations": {
+    ".eslintrc": "jsonc"
+  },
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+
+  // "Highlight Line" by Clifford Fajardo
+  "highlightLine.borderColor": "#00ff00",
+  "highlightLine.borderStyle": "solid",
+  "highlightLine.borderWidth": "1px",
+
+  "javascript.updateImportsOnFileMove.enabled": "always",
+
+  // "Peacock" by John Papa
+  // https://marketplace.visualstudio.com/items?itemName=johnpapa.vscode-peacock
+  // EXAMPLE: colorize individual instances of VS Code based on their contents
+  // `angular` repos vs. `react` repos
+  "peacock.affectTitleBar": true,
+  "peacock.favoriteColors": [
+    {
+      // https://ensembleblock.com/
+      "name": "Ensemble Block",
+      "value": "#1E3C62"
+    },
+    {
+      // https://www.npmjs.com/package/@percuss.io/soundslice-data-api
+      "name": "Soundslice",
+      "value": "#fc5d2b"
+    }
+  ],
+
+  // "python.defaultInterpreterPath": "/usr/bin/python3",
+
+  "search.exclude": {
+    "**/node_modules": false
+  },
+  "search.useGlobalIgnoreFiles": true,
+
+  // Tabnine AI Code Completion
+  "tabnine.experimentalAutoImports": true,
+
+  "terminal.explorerKind": "external",
+  "terminal.external.osxExec": "iTerm.app",
+
+  // "TODO Highlight" by Wayou Liu
+  "todohighlight.keywordsPattern": "CAUTION:|CHECK:|CONSIDER:|DOCUMENTATION:|DONE:|ERROR:|EXAMPLE:|EXAMPLES:|FIXME:|FROM:|FUTURE:|HACK:|IDEA:|IMPORTANT:|LEARN:|NEW:|NOTE:|OK:|OLD:|OPTIONAL:|QUESTION:|REMEMBER:|REMOVE:|RENAME:|REQUIRED:|RESEARCH:|SECURITY:|SEE:|TBD:|TEMP:|TEMPORARY:|TODO:|TRACE:|VERIFY:|WARN:|WARNING:|WHY\\?|WIP:",
+  "window.zoomLevel": 3,
+
+  // hide on the left side: Explorer, Search, Source Control, Run, Extensions
+  "workbench.activityBar.visible": false,
+
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#00ff00"
+  },
+
+  // "Dracula Official"
+  "workbench.colorTheme": "Dracula",
+
+  "workbench.editor.showIcons": false,
+  "workbench.editor.showTabs": true,
+  "workbench.editor.tabCloseButton": "off",
+  "workbench.sideBar.location": "right",
+  "workbench.startupEditor": "newUntitledFile",
+  "workbench.statusBar.visible": true
 }
+
+// "EditorConfig for VS Code"
+// "ESLint" by Dirk Baeumer
+// "GitLens - Git supercharged" by Eric Amodio

@@ -1,23 +1,36 @@
 [
-  // as is normal behavior,
-  // shift+cmd+f shows the search if it's not visible
+  // `shift+cmd+f` is a built-in keybinding
+  // to show the "global search" sidebar if it's not visible
+  // this customization allows us to toggle it closed
+  // with the same keybinding
   {
     "key": "shift+cmd+f",
-    "command": "workbench.view.search",
-    "when": "!searchViewletVisible"
-  },
-
-  // this customization hides the search when it is visible
-  {
-    "key": "shift+cmd+f",
-    "command": "workbench.action.closeSidebar",
+    "command": "workbench.action.toggleSidebarVisibility",
     "when": "searchViewletVisible"
   },
 
-  // two tabs to focus on search results instead of 8
-  // {
-  //   "key": "tab tab",
-  //   "command": "search.action.focusNextSearchResult",
-  //   "when": "searchViewletVisible && hasSearchResult"
-  // },
+  // `shift+cmd+e` is a built-in keybinding
+  // to show the "tree" (explorer) if it's not visible
+  // this customization allows us to toggle it closed
+  // with the same keybinding
+  {
+    "key": "shift+cmd+e",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "explorerViewletVisible"
+  },
+
+  // one click to focuson search results
+  // instead of 8 tabs
+  // this is similar to how `cmd+g` works in a single file
+  {
+    "key": "cmd+g",
+    "command": "search.action.focusNextSearchResult",
+    "when": "searchViewletVisible && hasSearchResult"
+  },
+  // this is similar to how `shift+cmd+g` works in a single file
+  {
+    "key": "shift+cmd+g",
+    "command": "search.action.focusPreviousSearchResult",
+    "when": "searchViewletVisible && hasSearchResult"
+  }
 ]
