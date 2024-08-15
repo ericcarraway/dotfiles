@@ -1,8 +1,8 @@
 [
   // `shift+cmd+f` is a built-in keybinding
-  // to show the "global search" sidebar if it's not visible
-  // this customization allows us to toggle it closed
-  // with the same keybinding
+  // to show the "global search" sidebar if it's not visible.
+  // This customization allows us to toggle it closed
+  // with the same keybinding.
   {
     "key": "shift+cmd+f",
     "command": "workbench.action.toggleSidebarVisibility",
@@ -10,27 +10,115 @@
   },
 
   // `shift+cmd+e` is a built-in keybinding
-  // to show the "tree" (explorer) if it's not visible
-  // this customization allows us to toggle it closed
-  // with the same keybinding
+  // to show the "tree" (explorer) if it's not visible.
+  // This customization allows us to toggle it closed
+  // with the same keybinding.
   {
     "key": "shift+cmd+e",
     "command": "workbench.action.toggleSidebarVisibility",
     "when": "explorerViewletVisible"
   },
 
-  // one click to focuson search results
-  // instead of 8 tabs
-  // this is similar to how `cmd+g` works in a single file
+  // One key-combination to focus on search results
+  // instead of 8 tabs.
+  // This is similar to how `cmd+g` works in a single file.
   {
     "key": "cmd+g",
     "command": "search.action.focusNextSearchResult",
     "when": "searchViewletVisible && hasSearchResult"
   },
-  // this is similar to how `shift+cmd+g` works in a single file
+  // This is similar to how `shift+cmd+g` works in a single file.
   {
     "key": "shift+cmd+g",
     "command": "search.action.focusPreviousSearchResult",
     "when": "searchViewletVisible && hasSearchResult"
+  },
+
+  {
+    "key": "cmd+y",
+    // This selects the entire word under the cursor.
+    // With successive taps of "y", you can expand to
+    // select an entire `camelCasedWord` under the cursor,
+    // then the entire line, block, etc.
+    "command": "editor.action.smartSelect.grow",
+    "when": "editorTextFocus"
+  },
+
+  // Switch between open tabs (editors).
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.nextEditor"
+  },
+
+  // These two take the default behavior of `cmd+[` and `cmd+]`
+  // and remap them to `cmd+shift+[` and `cmd+shift+]`.
+  {
+    "key": "cmd+shift+[",
+    "command": "editor.action.outdentLines"
+  },
+  {
+    "key": "cmd+shift+]",
+    "command": "editor.action.indentLines"
+  },
+
+  // Go to definition (à la Cmd+Click).
+  // This is a more ergonomic alternative to the `f12` default.
+  {
+    "key": "alt+y",
+    "command": "editor.action.goToDeclaration",
+    "when": "editorTextFocus"
+  },
+
+  // Open a link/URL in a browser.
+  {
+    "key": "alt+h",
+    "command": "editor.action.openLink",
+    "when": "editorTextFocus"
+  },
+
+  // Jump to the top of the file.
+  {
+    "key": "cmd+1",
+    "command": "cursorTop"
+  },
+
+  // Jump to the bottom of the file.
+  {
+    "key": "cmd+0",
+    "command": "cursorBottom"
+  },
+
+  // This duplicates the currently focused file in editor pane to the right.
+  {
+    "key": "cmd+2",
+    "command": "workbench.action.splitEditorToRightGroup"
+  },
+
+  {
+    "key": "cmd+shift+9",
+    "command": "workbench.action.toggleZenMode"
+  },
+
+  {
+    "key": "cmd+k",
+    "command": "editorScroll",
+    "args": {
+      "to": "up",
+      "by": "line",
+      "revealCursor": false
+    }
+  },
+  {
+    "key": "cmd+j",
+    "command": "editorScroll",
+    "args": {
+      "to": "down",
+      "by": "line",
+      "revealCursor": false
+    }
   }
 ]
